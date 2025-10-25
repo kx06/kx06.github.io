@@ -1,11 +1,11 @@
 baseURL = 'https://kx06.github.io'
 languageCode = 'en-us'
-title = "Patchless"
+title = "Krishhh16"
 
 pagination.pagerSize = 10
 
 [params]
-description = "Writeups for CTF, Leetcode and other things CS related"
+description = "Personal blog, DSA Writeups, Occasioanl HOW TOs maybe ?"
 dateFormat = "2 Jan, 2006"
 
 [markup]

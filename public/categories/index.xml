@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Patchless</title>
-    <link>https://patchless.netlify.app/categories/</link>
-    <description>Recent content in Categories on Patchless</description>
+    <title>Categories on Krishhh16</title>
+    <link>https://kx06.github.io/categories/</link>
+    <description>Recent content in Categories on Krishhh16</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 21 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://patchless.netlify.app/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kx06.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DSA</title>
-      <link>https://patchless.netlify.app/categories/dsa/</link>
+      <link>https://kx06.github.io/categories/dsa/</link>
       <pubDate>Tue, 21 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://patchless.netlify.app/categories/dsa/</guid>
+      <guid>https://kx06.github.io/categories/dsa/</guid>
       <description></description>
     </item>
   </channel>

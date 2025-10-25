@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>DSA on Patchless</title>
-    <link>https://patchless.netlify.app/categories/dsa/</link>
-    <description>Recent content in DSA on Patchless</description>
+    <title>DSA on Krishhh16</title>
+    <link>https://kx06.github.io/categories/dsa/</link>
+    <description>Recent content in DSA on Krishhh16</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 21 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://patchless.netlify.app/categories/dsa/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kx06.github.io/categories/dsa/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Starting My Codeforces Journey - CP 31 Sheet</title>
-      <link>https://patchless.netlify.app/starting-my-codeforces-journey---cp-31-sheet/</link>
+      <link>https://kx06.github.io/starting-my-codeforces-journey---cp-31-sheet/</link>
       <pubDate>Tue, 21 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://patchless.netlify.app/starting-my-codeforces-journey---cp-31-sheet/</guid>
+      <guid>https://kx06.github.io/starting-my-codeforces-journey---cp-31-sheet/</guid>
       <description>&lt;h3 id=&#34;background-and-starting-with-codeforces&#34;&gt;Background and Starting with Codeforces!&lt;/h3&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve done a bit of Leetcode before and I wouldn&amp;rsquo;t say I&amp;rsquo;m great at it but I kinda wanted to check out Codeforces cuz everyone talks a lot about it. This site seems to have a lot of questions so its prolly better to follow a sheet so that we gradually solve higher rated questions.&#xA;I have a decent understanding of most data structures and algorithms so I don&amp;rsquo;t think ill be filtering out questions that use certain DS and Algos.&lt;/p&gt;</description>
     </item>
   </channel>

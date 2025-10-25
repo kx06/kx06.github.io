@@ -1,0 +1,21 @@
+baseURL = 'https://patchless.netlify.app/'
+languageCode = 'en-us'
+title = "Patchless"
+
+pagination.pagerSize = 10
+
+[params]
+description = "Writeups for CTF, Leetcode and other things CS related"
+dateFormat = "2 Jan, 2006"
+
+[markup]
+  [markup.highlight]
+    style = 'onedark'
+
+
+[taxonomies]
+category = "categories"
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'

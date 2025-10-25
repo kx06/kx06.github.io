@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="Competitive Coding Icon">
+  <defs>
+    <linearGradient id="grad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <style>
+      .bg { fill: #0f172a; }
+      .frame { fill: none; stroke: #1e293b; stroke-width: 3; }
+      .code { stroke: url(#grad); stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .spark { fill: #fbbf24; opacity: 0.9; }
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect class="bg" width="128" height="128" rx="24" />
+
+  <!-- subtle inner frame -->
+  <rect x="10" y="10" width="108" height="108" rx="20" class="frame"/>
+
+  <!-- </> code symbol -->
+  <path class="code" d="M38 44 L22 64 L38 84 M90 44 L106 64 L90 84" />
+  <line class="code" x1="56" y1="40" x2="72" y2="88"/>
+
+  <!-- small golden spark for accent -->
+  <circle class="spark" cx="64" cy="24" r="4"/>
+</svg>

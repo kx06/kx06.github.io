@@ -1,0 +1,10 @@
+{{- $lang := .Type | lower -}}
+<div class="codeblock">
+  <div class="codeblockHeader">
+    <span class="codeblockLang">{{ if $lang }}{{ $lang }}{{ else }}code{{ end }}</span>
+    <button class="copyButton" type="button" aria-label="Copy code">
+      Copy
+    </button>
+  </div>
+  {{ highlight .Inner $lang "linenos=inline" }}
+</div>

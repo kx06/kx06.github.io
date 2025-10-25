@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="list mainTop">
+    <div class="listItemTexts" style="margin-bottom:20px;">
+        <h1 class="listItemTextsHeading">Categories</h1>
+        <p class="listItemDesc">Browse posts by category.</p>
+    </div>
+    <div class="termsPills">
+        {{- with .Data.Terms -}}
+            {{- range .Alphabetical -}}
+                <a class="pill" href="{{ .Page.Permalink }}">
+                    <span class="pillLabel">{{ .Page.Title }}</span>
+                    <span class="pillCount">{{ .Count }}</span>
+                </a>
+            {{- end -}}
+        {{- end -}}
+    </div>
+</div>
+{{ end }}
+

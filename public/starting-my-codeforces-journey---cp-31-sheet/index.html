@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content = First&#32;time&#32;doing&#32;codeforces!!!&#32;Solving&#32;first&#32;2&#32;questions&#32;of&#32;the&#32;CP-31&#32;Sheet>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/syntax.css">
+    <title>Starting My Codeforces Journey - CP 31 Sheet</title>
+</head>
+<body>
+    <div class = "container">
+    <nav class="navbar">
+    <div class="logo">
+        <a href="/">Patchless</a>
+    </div>
+    <div class="links">
+        <a class="linkElement" href="/">Home</a> |
+        <a class="linkElement" href="/categories">Categories</a>
+        
+    </div>
+</nav>
+    
+<div class="single">
+    <div class="singleHead">
+        <div class="singleHeadTexts">
+
+            <h1 class="singleHeadTitle">Starting My Codeforces Journey - CP 31 Sheet</h1>
+            
+            <div class="singleHeadDetail">
+                
+                    <a href=https://patchless.netlify.app/categories/dsa/ class="singleCategory">DSA</a>
+                
+                <p class="singleHeadDetailPara">&#x2022;</p>
+                <time class="singleTime">21 Oct, 2025</time>
+            </div>
+        </div>
+    </div>
+    <div class="singleBottom">
+        <div class="singleContent">
+            <h3 id="background-and-starting-with-codeforces">Background and Starting with Codeforces!</h3>
+<p>I&rsquo;ve done a bit of Leetcode before and I wouldn&rsquo;t say I&rsquo;m great at it but I kinda wanted to check out Codeforces cuz everyone talks a lot about it. This site seems to have a lot of questions so its prolly better to follow a sheet so that we gradually solve higher rated questions.
+I have a decent understanding of most data structures and algorithms so I don&rsquo;t think ill be filtering out questions that use certain DS and Algos.</p>
+<p>So yea, i picked CP-31 sheets, you can find the sheet on TLE Eliminators or <strong><a href="https://codolio.com/question-tracker/sheet/800-rated-cp-31-sheet?category=popular">Codolio</a></strong>, I&rsquo;m gonna start from 800 rating cuz thats the lowest from where you can start haha.</p>
+<h4 id="1-halloumi-boxes">1. Halloumi Boxes</h4>
+<p>First Q :)))</p>
+<p>So the question itself seems fairly straightforward, we need to sort a bunch of boxes according to their labels, the sorting machine used reverses the subarrays of length k or smaller than that.</p>
+<p>This is fairly straightforward as, when we think about reversing two elements, its the same as swapping them. Swapping two elements is very good in terms of freedom, i.e we can achieve any permutation. The same can&rsquo;t be said when we have subarrays of length 3. the middle element stays in the same place, we can think along the same lines when length becomes 4 and so on.</p>
+<p>So all we have to do is write code for the cases when k = 1 and k = 2 or greater.
+Pretty simple.</p>
+<div class="codeblock">
+  <div class="codeblockHeader">
+    <span class="codeblockLang">cpp</span>
+    <button class="copyButton" type="button" aria-label="Copy code">
+      Copy
+    </button>
+  </div>
+  <div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 1</span><span><span style="color:#e5c07b">bool</span> <span style="color:#61afef;font-weight:bold">solve</span>(<span style="color:#e5c07b">int</span> <span style="color:#e06c75">n</span>, <span style="color:#e5c07b">int</span> <span style="color:#e06c75">k</span>, <span style="color:#e06c75">vector</span><span style="color:#56b6c2">&lt;</span><span style="color:#e5c07b">long</span> <span style="color:#e5c07b">long</span><span style="color:#56b6c2">&gt;</span> <span style="color:#e06c75">vi</span>) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 2</span><span>  <span style="color:#c678dd">if</span> (<span style="color:#e06c75">n</span> <span style="color:#56b6c2">==</span> <span style="color:#d19a66">1</span> <span style="color:#e06c75">and</span> <span style="color:#e06c75">k</span> <span style="color:#56b6c2">==</span> <span style="color:#d19a66">1</span>) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 3</span><span>    <span style="color:#c678dd">return</span> <span style="color:#e5c07b">true</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 4</span><span>  } <span style="color:#c678dd">else</span> <span style="color:#c678dd">if</span> (<span style="color:#e06c75">n</span> <span style="color:#56b6c2">&gt;</span> <span style="color:#d19a66">1</span> <span style="color:#e06c75">and</span> <span style="color:#e06c75">k</span> <span style="color:#56b6c2">==</span> <span style="color:#d19a66">1</span>) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 5</span><span>    <span style="color:#e5c07b">long</span> <span style="color:#e5c07b">long</span> <span style="color:#e06c75">prev</span> <span style="color:#56b6c2">=</span> <span style="color:#e06c75">vi</span>[<span style="color:#d19a66">0</span>];
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 6</span><span>    <span style="color:#c678dd">for</span> (<span style="color:#e5c07b">int</span> <span style="color:#e06c75">i</span> <span style="color:#56b6c2">=</span> <span style="color:#d19a66">1</span>; <span style="color:#e06c75">i</span> <span style="color:#56b6c2">&lt;</span> <span style="color:#e06c75">n</span>; <span style="color:#e06c75">i</span><span style="color:#56b6c2">++</span>) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 7</span><span>      <span style="color:#c678dd">if</span> (<span style="color:#e06c75">prev</span> <span style="color:#56b6c2">&gt;</span> <span style="color:#e06c75">vi</span>[<span style="color:#e06c75">i</span>]) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 8</span><span>        <span style="color:#c678dd">return</span> <span style="color:#e5c07b">false</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 9</span><span>      }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">10</span><span>      <span style="color:#e06c75">prev</span> <span style="color:#56b6c2">=</span> <span style="color:#e06c75">vi</span>[<span style="color:#e06c75">i</span>];
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">11</span><span>    }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">12</span><span>    <span style="color:#c678dd">return</span> <span style="color:#e5c07b">true</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">13</span><span>  } <span style="color:#c678dd">else</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">14</span><span>    <span style="color:#c678dd">return</span> <span style="color:#e5c07b">true</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">15</span><span>  }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">16</span><span>}</span></span></code></pre></div>
+</div>
+<h4 id="2-line-trip">2. Line Trip</h4>
+<p>We are pretty quickly on to the 2nd question. This seems even more straightforward haha, they give us a starting and ending point where we can&rsquo;t fill fuel but rest of the places we can fill fuel.
+All we have to do is assume the max fuel we require is 0 at the start and keep checking and increasing as when required. Only thing we gotta keep in mind is that when we go from the last fuel station to the ending point, we need to come back, since there is no fuel station there, we need to 2x the distance/fuel required. Pretty chill all around.</p>
+<div class="codeblock">
+  <div class="codeblockHeader">
+    <span class="codeblockLang">cpp</span>
+    <button class="copyButton" type="button" aria-label="Copy code">
+      Copy
+    </button>
+  </div>
+  <div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 1</span><span><span style="color:#e5c07b">void</span> <span style="color:#61afef;font-weight:bold">solve</span>(<span style="color:#e5c07b">int</span> <span style="color:#e06c75">n</span>, <span style="color:#e5c07b">int</span> <span style="color:#e06c75">x</span>, <span style="color:#e06c75">vector</span><span style="color:#56b6c2">&lt;</span><span style="color:#e5c07b">long</span> <span style="color:#e5c07b">long</span><span style="color:#56b6c2">&gt;</span> <span style="color:#e06c75">stations</span>) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 2</span><span>  <span style="color:#e5c07b">long</span> <span style="color:#e5c07b">long</span> <span style="color:#e06c75">prev</span> <span style="color:#56b6c2">=</span> <span style="color:#d19a66">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 3</span><span>  <span style="color:#e5c07b">long</span> <span style="color:#e5c07b">long</span> <span style="color:#e06c75">mx</span> <span style="color:#56b6c2">=</span> <span style="color:#d19a66">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 4</span><span>  <span style="color:#c678dd">for</span> (<span style="color:#e5c07b">int</span> <span style="color:#e06c75">i</span> <span style="color:#56b6c2">=</span> <span style="color:#d19a66">0</span>; <span style="color:#e06c75">i</span> <span style="color:#56b6c2">&lt;</span> <span style="color:#e06c75">n</span>; <span style="color:#e06c75">i</span><span style="color:#56b6c2">++</span>) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 5</span><span>    <span style="color:#e06c75">mx</span> <span style="color:#56b6c2">=</span> <span style="color:#e06c75">max</span>(<span style="color:#e06c75">mx</span>, <span style="color:#e06c75">stations</span>[<span style="color:#e06c75">i</span>] <span style="color:#56b6c2">-</span> <span style="color:#e06c75">prev</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 6</span><span>    <span style="color:#e06c75">prev</span> <span style="color:#56b6c2">=</span> <span style="color:#e06c75">stations</span>[<span style="color:#e06c75">i</span>];
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 7</span><span>  }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 8</span><span>  <span style="color:#e06c75">mx</span> <span style="color:#56b6c2">=</span> <span style="color:#e06c75">max</span>(<span style="color:#e06c75">mx</span>, <span style="color:#d19a66">2</span> <span style="color:#56b6c2">*</span> (<span style="color:#e06c75">x</span> <span style="color:#56b6c2">-</span> <span style="color:#e06c75">prev</span>));
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 9</span><span>  <span style="color:#e06c75">cout</span> <span style="color:#56b6c2">&lt;&lt;</span> <span style="color:#e06c75">mx</span> <span style="color:#56b6c2">&lt;&lt;</span> <span style="color:#98c379">&#34;</span><span style="color:#98c379">\n</span><span style="color:#98c379">&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">10</span><span>}</span></span></code></pre></div>
+</div>
+<p>So, yea very good beginnings I suppose. I&rsquo;ll try and fit in more questions from the next post as we don&rsquo;t really need so much clutter for 800 rating haha. Onto Next.</p>
+
+        </div>
+    </div>
+</div>
+
+    <div class="footer">
+    <div class="footerlinks">
+        <a href="/">Patchless</a> | 
+        <a href="/categories">categories</a> |
+        <a href="sitemap.xml">sitemap</a>
+    </div>
+</div>
+    </div>
+    <script src="/scripts/copy-code.js" defer></script>
+</body>
+</html>

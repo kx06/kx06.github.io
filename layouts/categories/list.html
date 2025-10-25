@@ -1,0 +1,22 @@
+
+{{ define "main" }}
+<div class="categoryList">
+    {{ range .Paginator.Pages }}
+        <a class="categoryCard" href={{.Permalink}}>
+            <img src={{ .Params.image }} alt={{.Title}} class="categoryCardImage" loading="lazy">
+            <div class="categoryCardBody">
+                <h2 class="categoryCardTitle">{{.Title}}</h2>
+                <p class="categoryCardDesc">{{.Params.description}}</p>
+                <div class="categoryCardMeta">
+                    <time>{{ dateFormat .Site.Params.dateFormat .Date }}</time>
+                </div>
+                <div class="categoryCardTags">
+                    {{ range(.GetTerms "categories") }}
+                    <span class="listItemCategory">{{ .Name }}</span>
+                    {{end}}
+                </div>
+            </div>
+        </a>
+    {{ end }} {{ template "_internal/pagination.html" . }}
+</div>
+{{ end }}
